@@ -28,8 +28,7 @@ app:
       rate_of_change: 修改
       target: 目标
     tooltip:
-      help: 按住 Shift 键可缩放图表。<br />点击以将名称显示在图表。<br
-        />点击以将功率显示在图表。
+      help: 按住 Shift 键可缩放图表。<br />点击以将名称显示在图表。<br />点击以将功率显示在图表。
   console:
     label:
       auto_scroll: 自动滚动
@@ -98,6 +97,7 @@ app:
       layer: 当前层数
       layers: 总层数
       parsed: 已解析
+      parsing_file: 解析文件
       show_extrusions: 显示已打印部分
       show_moves: 显示移动走线
       show_next_layer: 显示下一层
@@ -151,6 +151,7 @@ app:
       send: 发送
       set_color: 设置颜色
       shutdown: 关闭
+      snooze: 休眠
       socket_reconnect: 重新连接
       socket_refresh: 强制刷新
       upload: 上传
@@ -166,6 +167,7 @@ app:
       acceleration: 加速度
       actual_time: 实际剩余
       add_camera: 添加摄像头
+      add_category: 添加分类
       add_filter: 添加过滤
       add_preset: 添加预设
       add_user: 添加用户
@@ -181,6 +183,7 @@ app:
       current_password: 当前密码
       disabled_while_printing: 打印时禁用
       edit_camera: 编辑摄像头设置
+      edit_category: 修改分类
       edit_filter: 编辑筛选
       edit_preset: 编辑预设
       edit_user: 编辑用户
@@ -188,6 +191,7 @@ app:
       extrude_speed: 挤出速度
       filament: 已用耗材
       file: 文件名称
+      file_time: 文件
       finish_time: 完成时间
       flow: 流量
       free: 可用
@@ -307,6 +311,7 @@ app:
       system: 系统
       system_overview: 系统信息
       temperature: 温度
+      timelapse: 时间间隔
       tool: 工具
       tune: 调整
     tooltip:
@@ -445,14 +450,73 @@ app:
       system_memory: 系统内存
       system_utilization: 系统利用率
       total_memory: 内存
+  timelapse:
+    btn:
+      render: 渲染
+      save_frames: 保存图像
+    error:
+      newframe: 拍摄延时图像时出错
+    label:
+      frame: 帧数
+      frames: '%{frames} 帧'
+      length: 预计时长
+    setting:
+      auto_render: 自动渲染
+      crf: 恒定速率因子
+      duplicatelastframe: 复制最后一帧
+      enable: 启用
+      fw_retract: 使用硬件回抽
+      gcode_verbose: 详细 GCode
+      hyperlapse_cycle: 延时摄影周期
+      mode: 模式
+      mode_hyperlapse: 延时摄影
+      mode_layermacro: 图层宏
+      output_framerate: 输出帧率
+      park_custom_pos_dz: 停机时 Z 轴坐标
+      park_custom_pos_x: 停机时 X 轴坐标
+      park_custom_pos_y: 停机时 Y 轴坐标
+      park_extrude_distance: 停机时挤出机移动距离
+      park_extrude_speed: 停机时挤出机速度
+      park_retract_distance: 停机时回抽距离
+      park_retract_speed: 停机时回抽速度
+      park_time: 停机时间
+      park_travel_speed: 停机时移动速度
+      parkhead: 停机
+      parkpos:
+        back_left: 左后方
+        back_right: 右后方
+        center: 中心
+        custom: 自定义
+        front_left: 左前方
+        front_right: 右前方
+        label: 停机位置
+      previewimage: 生成缩略图
+      saveframes: 保存图像
+      stream_delay_compensation: 延迟补偿
+      targetlength: 目标长度
+      variable_fps: 可变帧率
+      variable_fps_max: 最高帧率
+      variable_fps_min: 最低帧率
+    title:
+      render_settings: 渲染设定
+      timelapse_settings: 时间间隔设定
+      timelapse_status: 时间间隔状态
+    tooltip:
+      managed_by_moonraker: 由 Moonraker 的配置进行控制
   tool:
     btn:
+      home_all: 全部
       home_x: X
-      home_y: Y
+      home_y: 'Y'
     tooltip:
+      bed_screws_adjust: 热床螺丝调整
       extruder_disabled: '挤出机操作已被禁用，低于 min_extrude_temp 设置的最低温度 (%{min}<small>°C</small>)'
       home_xy: 归零 XY
       home_z: 归零 Z
+      motors_off: 停止电机
+      quad_gantry_level: 龙门架水平高度
+      screws_tilt_calculate: 热床螺丝倾斜角度计算
+      z_tilt_adjust: Z 轴倾斜角度调整
   version:
     btn:
       check_for_updates: 检查更新
